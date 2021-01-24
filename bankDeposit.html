@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bankDeposite.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <div id="login-area">
+        <h1 style="text-align: center;" class="mt-5">wecome to bank deposit</h1>
+
+
+        <div class="div-style">
+
+            <h3>Login</h3>
+            <input type="text" class="form-control" placeholder="email">
+            <br>
+            <input type="password" class="form-control" placeholder="password">
+            <br>
+            <button id="loginbtn" class="btn btn-success">Enter</button>
+
+        </div>
+    </div>
+
+    <!------account--------->
+
+    <div id="account-area">
+        
+        
+  
+<div class="row mt-5">
+    <div class="col-md-4">
+        
+        
+        <div class="dcard" >
+           <h2> Deposit</h2>
+           <h2> $ <span id="deposit-hl">00</span></h2>
+        </div>
+        
+
+    </div> 
+    <div class="col-md-4">
+
+        <div class="wcard">
+             <h2>Withdraw</h2>
+             <h2>$ <span id="withdraw">00</span></h2>
+
+        </div>
+
+    </div>
+    <div class="col-md-4">
+
+         <div class="bcard">
+             <h2>Balance</h2>
+             <h2>$ <span id="current-balance">00</span></h2>
+        </div>
+
+    </div>
+    
+</div>
+
+
+<!------nicher ongso---------->
+
+<div class="row mt-3">
+<div class="col-md-6">
+    <div class="nchr-1">
+        <h2>Deposit</h2> 
+        <br>
+        <input id="inpt-1" type="text" class="form-control" placeholder="Enter your amount">
+        <br>
+        <button id="btn" class="btn btn-danger">Deposit</button>   
+    </div>
+</div>
+
+
+<div class="col-md-6">
+    <div class="nchr-2">
+        <h2>Withdraw</h2> 
+        <br>
+        <input id="inpt-2" type="text" class="form-control" placeholder="Enter your amount">
+        <br>
+        <button id="btn2" class="btn btn-danger">Withdraw</button>   
+    </div>
+</div>
+</div>
+</div>
+
+    <script>
+        // login area 
+
+        const loginArea = document.getElementById
+        ('loginbtn');
+
+        loginArea.addEventListener('click', function(){
+            const Area =document.getElementById
+            ('login-area');
+
+            Area.style.display='none';
+
+            const accountArea = document.getElementById('account-area');
+            accountArea.style.display='block';
+        })
+          //acount-area
+
+    const acountArea=document.getElementById('btn');
+    acountArea.addEventListener('click',function(){
+        const dpInput=document.getElementById('inpt-1').value;
+        const cnvrt1=parseFloat(dpInput);
+        const cl=document.getElementById('deposit-hl').innerText;
+        const cnvrt2=parseFloat(cl);
+
+        const finalOutput = cnvrt1+cnvrt2
+        document.getElementById('deposit-hl').innerText=finalOutput;
+        document.getElementById('inpt-1').value="";
+
+        const addBalance=document.getElementById('current-balance').innerText;
+        const cnvrt3=parseFloat(addBalance);
+        const jog= cnvrt1+cnvrt3 ;
+        document.getElementById('current-balance').innerText=jog ;
+
+
+     })
+
+
+// withdraw area
+
+     const withdrawArea =document.getElementById('btn2') ;
+     withdrawArea.addEventListener('click',function(){
+         const whInput=document.getElementById('inpt-2').value;
+         const cnvrtNow1=parseFloat(whInput);
+         const clNow=document.getElementById('withdraw').innerText;
+         const cnvrtNow2=parseFloat(clNow);
+
+         const finaljog=cnvrtNow1+cnvrtNow2;
+         document.getElementById('withdraw').innerText=finaljog;
+
+       
+         document.getElementById('inpt-2').value="";
+
+        const wdOutput=document.getElementById('current-balance').innerText;
+        const cnvrt4=parseFloat(wdOutput);
+        const jogg= cnvrt4-cnvrtNow1 ;
+        document.getElementById('current-balance').innerText=jogg ;
+     }) 
+
+
+
+
+</script>
+
+</body>
+</html>

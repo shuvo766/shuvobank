@@ -1,0 +1,52 @@
+.div-style{
+    margin: 100px;
+    box-shadow: 5px 5px 10px gray;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#account-area{
+    display: none;
+}
+
+.dcard{
+    margin:  40px;
+    padding: 40px;
+    color: white;
+    border-radius: 10px;
+    background-color: blueviolet;
+    
+    
+    }
+    
+    .wcard{
+    margin: 40px;
+    padding: 40px;
+    color: white;
+    border-radius: 10px;
+    background-color: burlywood;
+    
+    
+    }
+    
+    .bcard{
+    margin: 40px;
+    padding: 40px;
+    color: white;
+    border-radius: 10px;
+    background-color: brown;
+    }
+
+    .nchr-1{
+        box-shadow: 5px 5px 10px grey ;
+        border-radius: 5px;
+        margin: 60px;
+        padding: 20px;
+    }
+
+    .nchr-2{
+        box-shadow: 5px 5px 10px grey ;
+        border-radius: 5px;
+        margin: 60px;
+        padding: 20px;
+    }
